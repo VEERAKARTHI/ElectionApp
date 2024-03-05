@@ -7,16 +7,16 @@ namespace ElectionApp.Controllers
 {
     public class VoterController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public VoterController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            var Voters = new List<Voter>
-            {
-                new Voter { Id = 1, Name = "User1" },
-                new Voter { Id = 2, Name = "User2" },
-                new Voter { Id = 3, Name = "User3"},
-            };
-
-            return View(Voters);
+            var voters = _context.Voters.ToList();
+            return View(voters);
         }
     }
 }

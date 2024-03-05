@@ -14,7 +14,6 @@ namespace ElectionApp.Controllers
                 new Voter { Id = 1, Name = "User1" },
                 new Voter { Id = 2, Name = "User2" },
                 new Voter { Id = 3, Name = "User3"},
-                // Add more states and their corresponding MP seat counts as needed
             };
 
             return View(Voters);

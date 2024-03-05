@@ -1,0 +1,21 @@
+﻿<!-- Views/PartySymbol/Index.cshtml -->
+
+@model IEnumerable<ElectionApp.Models.PartySymbol>
+
+<h1>Master Data for Party Symbols</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var symbol in Model)
+        {
+            <tr>
+                <td>@symbol.Symbol</td>
+            </tr>
+        }
+    </tbody>
+</table>

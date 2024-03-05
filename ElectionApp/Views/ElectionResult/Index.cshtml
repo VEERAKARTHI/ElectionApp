@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ElectionApp.Models.ElectionResult>
+
+<h1>Candidate List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ElectionResult in Model)
+        {
+            <tr>
+                <td>@ElectionResult.Candidate</td>
+                <td>@ElectionResult.Votes</td>
+            </tr>
+        }
+    </tbody>
+</table>

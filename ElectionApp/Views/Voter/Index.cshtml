@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ElectionApp.Models.Candidate>
+
+<h1>Vote for a Candidate</h1>
+
+<form asp-action="Submit" method="post">
+    <div class="form-group">
+        <label for="candidate">Select a Candidate:</label>
+        <select class="form-control" id="candidate" name="candidateId">
+            @foreach (var candidate in Model)
+            {
+                <option value="@candidate.Id">@candidate.Name - @candidate.Party</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Vote</button>
+</form>

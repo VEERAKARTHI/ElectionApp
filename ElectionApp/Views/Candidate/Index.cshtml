@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ElectionApp.Models.Candidate>
+
+<h1>Candidate List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Party</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Candidate in Model)
+        {
+        <tr>
+            <td>@Candidate.Id</td>
+            <td>@Candidate.Name</td>
+            <td>@Candidate.Party</td>
+        </tr>
+        }
+    </tbody>
+</table>
